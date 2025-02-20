@@ -7,7 +7,7 @@
     @vite('resources/css/app.css')
 </head>
 <body class="bg-gray-100">
-    <nav class="bg-white shadow p-4">
+    <nav class="bg-linear-to-r from-purple-200 via-violet-400 to-indigo-600 p-4">
 <h1 class="text-xl font-bold text-blue-500">My Task App</h1>
     </nav>
 <main class="p-4">
