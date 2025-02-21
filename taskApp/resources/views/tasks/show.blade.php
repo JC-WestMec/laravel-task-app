@@ -1,29 +1,49 @@
 @extends('layouts.app')
+
 @section('content')
-<h1>Task Details</h1>
-<div>
-<strong>Task Name:</strong> {{ $task->task_name }}
-</div>
-<div>
-<strong>Location:</strong> {{ $task->task_location }}
-</div>
-<div>
-<strong>Time Complexity:</strong> {{ $task->time_complexity }}
-</div>
-<div>
-<strong>Materials Required:</strong> {{ $task->materials_required }}
-</div>
-<div>
-<strong>Deadline:</strong> {{ $task->deadline }}
-</div>
-<div>
-<strong>Priority:</strong> {{ $task->priority }}
-</div>
-<div>
-<strong>Category:</strong> {{ $task->category }}
-</div>
-<div style="margin-top:20px;">
-<a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary">Edit Task</a>
-<a href="{{ route('tasks.index') }}" class="btn btn-secondary">Back to List</a>
+<div class="container">
+    <h1>Task Details</h1>
+
+    <div class="card p-4">
+        <div class="mb-3">
+            <strong>Task Name:</strong> 
+            <div class="border p-2 rounded">{{ $task->task_name }}</div>
+        </div>
+
+        <div class="mb-3">
+            <strong>Location:</strong> 
+            <div class="border p-2 rounded">{{ $task->task_location }}</div>
+        </div>
+
+        <div class="mb-3">
+            <strong>Time Complexity:</strong> 
+            <div class="border p-2 rounded">{{ $task->time_complexity }}</div>
+        </div>
+
+        <div class="mb-3">
+            <strong>Materials Required:</strong> 
+            <div class="border p-2 rounded">{{ $task->materials_required }}</div>
+        </div>
+
+        <div class="mb-3">
+            <strong>Deadline:</strong> 
+            <div class="border p-2 rounded">{{ $task->deadline }}</div>
+        </div>
+
+        <div class="mb-3">
+            <strong>Priority:</strong> 
+            <div class="border p-2 rounded">{{ $task->priority }}</div>
+        </div>
+
+        <div class="mb-3">
+            <strong>Category:</strong> 
+            <div class="border p-2 rounded">{{ $task->category }}</div>
+        </div>
+
+        <div class="mt-4">
+            <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary">Edit Task</a>
+            <a href="{{ route('tasks.index') }}" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
 </div>
 @endsection
